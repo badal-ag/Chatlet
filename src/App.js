@@ -11,7 +11,7 @@ function App() {
           projectID="068601a6-de5f-4c74-8327-95474c339b73"
           userName="admin"
           userSecret="9876543210"
-          /*renderChatFeed={(chatAppProps) => <ChatFeed {...chatAppProps}/>}*/
+          renderChatFeed={(chatAppProps) => <ChatFeed {...chatAppProps}/>}
       />
     </>
   );
