@@ -3,7 +3,7 @@ import { ChatEngine } from 'react-chat-engine';
 import ChatFeed from './components/ChatFeed';
 import LoginForm from './components/LoginForm';
  
-const projectID = "068601a6-de5f-4c74-8327-95474c339b73";
+const projectID = "Your Project Id";
 
 function App() {
 
