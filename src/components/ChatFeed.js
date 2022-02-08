@@ -16,7 +16,7 @@ export default function ChatFeed(props) {
                 style={{ float: isMyMessage ? 'right' : 'left',
                        backgroundImage: `url(${person?.person?.avatar})`}}
             />
-        ))
+        ));
     }
 
     const renderMessages = () => {
@@ -28,7 +28,7 @@ export default function ChatFeed(props) {
             const lastMessageKey = index === 0 ? null : keys[index - 1];
             const isMyMessage = userName === message.sender.username;
 
-            return(
+            return  (
                 <div key={`msg_${index}`} style={{width: '100%'}} >
                     <div className='message-block'>
                         {
@@ -49,8 +49,7 @@ export default function ChatFeed(props) {
     if(!chat) return 'Loading....';
 
     return (
-        <>
-       <div className='chat-feed'>
+        <div className='chat-feed'>
             <div className='chat-title-container'>
                 <div className='chat-title'>{chat.title}</div>
                 <div className='chat-subtitle'>
@@ -67,6 +66,5 @@ export default function ChatFeed(props) {
             </div>
             
         </div>
-        </>
     );
 }

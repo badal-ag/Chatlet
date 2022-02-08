@@ -5,6 +5,7 @@ export default function LoginForm() {
 
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const [error, setError] = useState('');
 
     const handleSubmit = async(e) => {
 
@@ -18,12 +19,12 @@ export default function LoginForm() {
             window.location.reload();
             alert(`${username} Logged In Successfully`);
         } catch(error) {
-
+            setError('Oops! Login Failed. Check the Credentials and Try Again');
         }
 
     }
 
-    return 
+    return (
         <div className='wrapper'>
             <div className='form'>
                 <h1 className='title'>Chatlet</h1>
@@ -35,8 +36,10 @@ export default function LoginForm() {
                             <span>Start Chatting</span>
                         </button>
                     </div>
+                    <h2 className='error'>{error}</h2>
                 </form>
             </div>
             
-        </div>;
+        </div>
+    );
 }

@@ -12,7 +12,7 @@ export default function MessageForm(props) {
 
     event.preventDefault();
     const text = value.trim();
-    if(text.length > 0) sendMessage( creds, chatId, { text });
+    if(text.length > 0) { sendMessage( creds, chatId, { text }); }
     setValue('');
 
   };
@@ -30,7 +30,7 @@ export default function MessageForm(props) {
 
   };
 
-  return 
+  return (
     <div>
       <form className='message-form' onSubmit={handleSubmit}>
         <input className='message-input' placeholder='Send a Message' value={value} onChange={handleChange} onSubmit={handleSubmit}/>
@@ -39,11 +39,11 @@ export default function MessageForm(props) {
             <PictureOutlined className='picture-icon'/>
           </span>
         </label>
-        <input type='file' multiple={false} id="upload-button" style={{ display: 'none' }} onChange={handleUpload} />
-        <button type='submit'>
+        <input type='file' multiple={false} id="upload-button" style={{ display: 'none' }} onChange={handleUpload.bind(this)} />
+        <button type='submit' className='send-button'>
           <SendOutlined className='send-icon' />
         </button>
-
       </form>
-    </div>;
-}
+    </div>
+  );
+};
