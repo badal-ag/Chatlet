@@ -13,8 +13,9 @@ export default function MyMessage({ message }) {
     )
   }
 
-  return 
+  return (
     <div className='message' style={{ float: 'right', marginRight: '18px', color: 'white', backgroundColor: '#3b2a50'}}>
       {message.text}
-    </div>;
+    </div>
+  );
 }
